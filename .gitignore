@@ -1,0 +1,6 @@
+### Administrative
+*.pyc
+*.lnk
+*.code-workspace
+*.bat
+*.log
