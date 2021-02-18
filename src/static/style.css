@@ -1,6 +1,7 @@
 body {
-    font: 100% Lucida Sans, Verdana;
     margin: 20px;
+    color: black;
+    background-color: blue;
     line-height: 26px;
 }
 
@@ -15,7 +16,7 @@ body {
 }
 
 #top {
-    background-color: #4CAF50;
+    background-color: rgba(0, 0, 255, 0.603);
     color: #ffffff;
     padding: 15px;
 }
@@ -83,7 +84,7 @@ a:hover {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 400px) {
     #sidebar {
         width: auto;
         position: relative;
@@ -94,7 +95,7 @@ a:hover {
        
 }
 
-@media (max-width: 600px) {
+@media (max-width: 300px) {
     #menubar {
         width: auto;
         float: none;
