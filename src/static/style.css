@@ -1,7 +1,7 @@
 body {
     margin: 20px;
     color: black;
-    background-color: blue;
+    background-color: #009dec;
     line-height: 26px;
 }
 
@@ -16,7 +16,7 @@ body {
 }
 
 #top {
-    background-color: rgba(0, 0, 255, 0.603);
+    background-color: #003e76;
     color: #ffffff;
     padding: 15px;
 }
