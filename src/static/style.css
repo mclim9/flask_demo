@@ -1,3 +1,4 @@
+/* Simple CSS */
 body {
     margin: 20px;
     color: black;
@@ -5,30 +6,35 @@ body {
     line-height: 26px;
 }
 
+a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 .wrapper {
     position: relative;
     overflow: auto;
 }
 
+/* Div definitions */
 #top, #sidebar, #bottom, .menuitem {
     border-radius: 4px;
     margin: 4px;
+}
+
+#top h1, #top p, #menulist {
+    margin: 0;
+    padding: 0;
 }
 
 #top {
     background-color: #003e76;
     color: #ffffff;
     padding: 15px;
-}
-
-#menubar {
-    width: 200px;
-    float: left
-}
-
-#main {
-    padding: 10px;
-    margin: 0 210px;
 }
 
 #sidebar {
@@ -47,13 +53,21 @@ body {
     background-color: #f1f1f1;
     text-align: center;
     padding: 10px;
-    font-size: 70%;
+    font-size: 100%;
     line-height: 14px;
 }
 
-#top h1, #top p, #menulist {
-    margin: 0;
-    padding: 0;
+#main {
+    padding: 10px;
+    margin: 0 210px;
+}
+
+/* ############################################################### */
+/* ### Menu Section  */
+/* ############################################################### */
+#menubar {
+    width: 200px;
+    float: left
 }
 
 .menuitem {
@@ -74,33 +88,26 @@ body {
    font-weight:bold;
 }
 
-a {
-    color: #000000;
-    text-decoration: underline;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
+/* ############################################################### */
+/* ### Main Section  */
+/* ############################################################### */
 
 @media (max-width: 400px) {
     #sidebar {
         width: auto;
         position: relative;
-    } 
+    }
     #main {
         margin-right: 0;
-    }    
-       
+    }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 200px) {
     #menubar {
         width: auto;
         float: none;
     }
     #main {
         margin: 0;
-    }    
+    }
 }
