@@ -10,26 +10,28 @@
 </head>
 
 <body>
-  <div id="top">
-    <form action="/instr1/" method="post">
-      <label for='ipAddr1'>Instrument 1 IP Address</label>
-      <input type="text"      id="ipAddr1"  name="ipaddr",  value={{data['ip1']}}><br>
-      <textarea name = "scpiArry", cols='50', rows='5'>{{data['SCPI1']}}</textarea><br>
-      <textarea name = "scpiOut",  cols='50', rows='5'>{{data['out1']}}</textarea><br>
-      <button name="instr1_query" type="submit">Query</button><br>
-    </form>
-  </div>
-  <div id="top">
-    <form action="/instr2/" method="post">
-      <label for='ipAddr2'>Instrument 2 IP Address</label>
-      <input type="text"      id="ipAddr2"  name="ipaddr",  value={{data['ip2']}}><br>
-      <textarea name = "scpiArry", cols='50', rows='5'>{{data['SCPI2']}}</textarea><br>
-      <textarea name = "scpiOut",  cols='50', rows='5'>{{data['out2']}}</textarea><br>
-      <button name="instr2_query" type="submit">Query</button><br>
-    </form>
-  </div>
-  <div id="bottom">
-    This demo app controls two SCPI instruments.  Instruments controlled via socket connection.
+  <div id='.wrapper'>
+    <div id="top">
+      <form action="/instr1/" method="post">
+        <label for='ipAddr1'>Instrument 1 IP Address</label>
+        <input type="text"      id="ipAddr1"  name="ipaddr",  value={{data['ip1']}}><br>
+        <textarea name = "scpiArry", cols='50', rows='5'>{{data['SCPI1']}}</textarea><br>
+        <textarea name = "scpiOut",  cols='50', rows='5'>{{data['out1']}}</textarea><br>
+        <button name="instr1_query" type="submit">Query</button><br>
+      </form>
+    </div>
+    <div id="top">
+      <form action="/instr2/" method="post">
+        <label for='ipAddr2'>Instrument 2 IP Address</label>
+        <input type="text"      id="ipAddr2"  name="ipaddr",  value={{data['ip2']}}><br>
+        <textarea name = "scpiArry", cols='50', rows='5'>{{data['SCPI2']}}</textarea><br>
+        <textarea name = "scpiOut",  cols='50', rows='5'>{{data['out2']}}</textarea><br>
+        <button name="instr2_query" type="submit">Query</button><br>
+      </form>
+    </div>
+    <div id="bottom">
+      This demo app controls two SCPI instruments.  Instruments controlled via socket connection.
+    </div>
   </div>
   <!-- <div id="menubar">
     <ul id="menulist">
