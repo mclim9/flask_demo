@@ -1,5 +1,5 @@
 """https://izziswift.com/flask-calling-python-function-on-button-onclick-event/"""  # noqa
-from flask import Flask, render_template, request, redirect, url_for      # noqa
+from flask import Flask, render_template, request, redirect, url_for                # noqa
 from iSocket import iSocket
 import webbrowser
 app = Flask(__name__)
@@ -41,20 +41,9 @@ def instr2():
     instr2.close()
     return redirect(url_for('index'))
 
-
-@app.route("/instr0/", methods=['POST'])
-def instr0():
-    # (((Get HTML Form Data)))
-    data['ip1'] = request.form.get('ipaddr', '')
-    data['SCPI1'] = request.form.get('scpi', '')
-
-    # (((Perform actions)))
-    instr1 = iSocket().open(data['ip1'], 5025)
-    scpiRd = instr1.query(data['SCPI1'])
-    print(f"Instr{data['ip1']}: {scpiRd}")
-    instr1.close()
-    return render_template('index.html')
-
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('404.html'), 404
 
 if __name__ == '__main__':
     # app.debug = True
