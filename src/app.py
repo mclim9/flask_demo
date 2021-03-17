@@ -16,8 +16,8 @@ def index():
 def instr1():
     if request.method == 'POST':
         # (((Get HTML Form Data)))
-        data['ip1']   = request.form.get('ipaddr', '')
-        data['SCPI1'] = request.form.get('scpiArry', '')
+        data['ip1']   = request.form.get('ipaddr', '')      # form element name
+        data['SCPI1'] = request.form.get('scpiArry', '')    # form element name
     else:
         data['ip1']   = request.args.get('ipaddr')
         data['SCPI1'] = request.args.get('scpi')
@@ -32,8 +32,8 @@ def instr1():
 @app.route("/instr2/", methods=['POST'])
 def instr2():
     # (((Get HTML Form Data)))
-    data['ip2']   = request.form.get('ipaddr', '')
-    data['SCPI2'] = request.form.get('scpiArry', '')
+    data['ip2']   = request.form.get('ipaddr', '')          # form element name
+    data['SCPI2'] = request.form.get('scpiArry', '')        # form element name
 
     # (((Perform actions)))
     instr2 = iSocket().open(data['ip2'], 5025)

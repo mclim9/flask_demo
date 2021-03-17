@@ -1,15 +1,7 @@
-from app import app
+import app.app
 import unittest
 
 class flask_app_demo(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        pass
-
-    @classmethod
-    def tearDownClass(cls):
-        pass
-
     def setUp(self):
         self.app = app.test_client()                # creates a test client
         self.app.testing = True                     # propagate the exceptions to the test client
